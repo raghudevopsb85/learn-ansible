@@ -1,8 +1,15 @@
+# variable precedence
+# cli level
+# task level
+# play level
+
 - name: Variable demo
   hosts: localhost
   connection: local
   vars:
     a: 100
+  roles:
+    - sample
   tasks:
     - name: Print Variable
       ansible.builtin.debug:
@@ -12,3 +19,10 @@
         a: 200
       ansible.builtin.debug:
         msg: a - {{ a }}
+
+
+
+
+
+
+
