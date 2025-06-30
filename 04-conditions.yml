@@ -1,0 +1,12 @@
+- name: Variable Types
+  hosts: localhost
+  connection: local
+  vars:
+    x: 100
+  tasks:
+    - name: Conditions
+      ansible.builtin.debug:
+        msg: Hello
+      when: x > 200
+
+
