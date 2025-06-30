@@ -3,7 +3,9 @@
 # task level
 # role level
 # play level
+# hosts_vars level
 # inventory level
+# group_vars level
 
 - name: Variable demo
   hosts: localhost
@@ -37,4 +39,10 @@
         msg: URL1 - {{ URL1 }}
 
 
+- name: Facts demo1
+  hosts: all
+  tasks:
+    - name: Print a fact
+      ansible.builtin.debug:
+        msg: ansible_architecture - {{ ansible_architecture }}
 
