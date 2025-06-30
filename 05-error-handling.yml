@@ -4,7 +4,8 @@
   tasks:
     - name: Run a shell command
       ansible.builtin.shell: grep admin /etc/passwd
-      register: otu
+      register: out
+      ignore_errors: yes
 
     - name: print
       ansible.builtin.debug:
