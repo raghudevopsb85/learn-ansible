@@ -89,5 +89,5 @@
   tasks:
     - name: Print
       ansible.builtin.debug:
-        msg: "First value in list - {{ my_list1[0] }} First Value in Map - {{ my_map2["some1"] }}"
+        msg: "First value in list - {{ my_list1[0] }} First Value in Map - {{ my_map2['some1'] }}"
 
