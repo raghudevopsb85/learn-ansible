@@ -1,0 +1,5 @@
+- name: Sample
+  hosts: all
+  tasks:
+    - name: Shell
+      ansible.builtin.shell: sleep 30
